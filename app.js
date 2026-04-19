@@ -7,7 +7,7 @@ async function initAuth0() {
         domain: 'raywekes.us.auth0.com',
         client_id: 'Bi9y3Ce47YGgdeIhHb6uXusgUuHiP7Wc',
         authorizationParams: {
-            redirect_uri: window.location.origin + "/Searchify"
+            redirect_uri: "https://rayw-exe.github.io/Searchify/"
         }
     });
 
@@ -29,12 +29,13 @@ async function handleRedirect() {
         await auth0client.handleRedirectCallback();
         
         
-        window.history.replaceState({}, document.title, "/");
+        window.history.replaceState({}, document.title, "/Searchify/");
         window.location.href = "dashboard.html";
     }
 }
 
 document.getElementById("loginBtn").onclick = async () => {
+    console.log("Auth0 client:", auth0client);
     if (!auth0client) {
         console.log("Auth0 client not initialized");
         return;
