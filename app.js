@@ -10,11 +10,17 @@ async function initAuth0() {
             redirect_uri: window.location.origin + "/Searchify"
         }
     });
+
+    console.log("Auth0 initialized", auth0client);
 }
+
+const loginBtn = document.getElementById("loginBtn");
+loginBtn.disabled = true;
 
 window.onload = async () => {
   await initAuth0();
   await handleRedirect();
+  loginBtn.disabled = false;
 };
 
 async function handleRedirect() {
@@ -29,10 +35,18 @@ async function handleRedirect() {
 }
 
 document.getElementById("loginBtn").onclick = async () => {
+    if (!auth0client) {
+        console.log("Auth0 client not initialized");
+        return;
+    }
     await auth0client.loginWithRedirect();
 };
 
 document.getElementById("signupBtn").onclick = async () => {
+    if (!auth0client) {
+        console.log("Auth0 client not initialized");
+        return;
+    }
     await auth0client.loginWithRedirect({
         authorizationParams: {
             screen_hint: "sign up"
