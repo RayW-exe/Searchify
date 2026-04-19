@@ -1,9 +1,66 @@
-//function to add a job item to the pending applications section of the dashboard when the user clicks the apply button on the jobs page
-function addJobItem() {
-    const jobItem = document.querySelector('.job-item');
-    const pendingApplications = document.querySelector('.pending')
-    const newJobItem = document.createElement('div')
-    newJobItem.classList.add('job-item')
-    newJobItem.innerHTML = jobItem.innerHTML
-    pendingApplications.appendChild(newJobItem)
+function addJobItem1() {
+    const jobItem = localStorage.getItem('jobData');
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('job-item1');
+    newDiv.innerHTML = jobItem;
+    const pendingJob = document.querySelector('.pending')
+    pendingJob.appendChild(newDiv)
+    const para = document.querySelector('.para')
+    if (getComputedStyle(para).display !== 'none'){
+        para.style.display = 'none'
+    }
+    const contactInfo = newDiv.querySelector('p[hidden]')
+    if (contactInfo) {
+        contactInfo.removeAttribute('hidden')
+    }
+}
+
+function addJobItem2() {
+    const jobItem = localStorage.getItem('jobData');
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('job-item2');
+    newDiv.innerHTML = jobItem;
+    const pendingJob = document.querySelector('.pending')
+    pendingJob.appendChild(newDiv)
+    const para = document.querySelector('.para')
+    if (getComputedStyle(para).display !== 'none'){
+        para.style.display = 'none'
+    }
+    const contactInfo = newDiv.querySelector('p[hidden]')
+    if (contactInfo) {
+        contactInfo.removeAttribute('hidden')
+    }
+}
+
+function addJobItem3() {
+    const jobItem = localStorage.getItem('jobData');
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('job-item3');
+    newDiv.innerHTML = jobItem;
+    const pendingJob = document.querySelector('.pending')
+    pendingJob.appendChild(newDiv)
+    const para = document.querySelector('.para')
+    if (getComputedStyle(para).display !== 'none'){
+        para.style.display = 'none'
+    }
+    const contactInfo = newDiv.querySelector('p[hidden]')
+    if (contactInfo) {
+        contactInfo.removeAttribute('hidden')
+    }
+}
+
+// Load job on page load
+const jobData = localStorage.getItem('jobData');
+const jobType = localStorage.getItem('jobType');
+if (jobData && jobType) {
+    if (jobType === '1') {
+        addJobItem1();
+    } else if (jobType === '2') {
+        addJobItem2();
+    } else if (jobType === '3') {
+        addJobItem3();
+    }
+    // Clear after adding
+    localStorage.removeItem('jobData');
+    localStorage.removeItem('jobType');
 }
