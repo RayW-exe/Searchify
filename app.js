@@ -7,7 +7,7 @@ async function initAuth0() {
         domain: 'raywekes.us.auth0.com',
         client_id: 'Bi9y3Ce47YGgdeIhHb6uXusgUuHiP7Wc',
         authorizationParams: {
-            redirect_uri: window.location.origin + "Searchify"
+            redirect_uri: window.location.origin + "/Searchify"
         }
     });
 }
