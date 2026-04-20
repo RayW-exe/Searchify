@@ -17,6 +17,10 @@ async function initAuth0() {
 const loginBtn = document.getElementById("loginBtn");
 loginBtn.disabled = true;
 
+if (document.getElementById("logout-btn")) {
+    localStorage.getItem('logout-btn').onclick = logout;
+}
+
 window.onload = async () => {
   await initAuth0();
   await handleRedirect();
@@ -67,7 +71,5 @@ async function logout() {
     });
 }
 
-if (document.getElementById("logoutBtn")) {
-    document.getElementById("logoutBtn").onclick = logout;
-}
+
 
