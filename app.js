@@ -5,7 +5,7 @@ let auth0client = null;
 async function initAuth0() {
     auth0client = await auth0.createAuth0Client({
         domain: 'raywekes.us.auth0.com',
-        client_id: 'Bi9y3Ce47YGgdeIhHb6uXusgUuHiP7Wc',
+        clientId: '6h32eairREMieGb5I6w14RwG54NmkdpA',
         authorizationParams: {
             redirect_uri: "https://rayw-exe.github.io/Searchify/"
         }
