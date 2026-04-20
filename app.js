@@ -15,14 +15,17 @@ async function initAuth0() {
 }
 
 const loginBtn = document.getElementById("loginBtn");
-loginBtn.disabled = true;
+if (loginBtn) {
+    loginBtn.disabled = true;
+}
 
-
+const logoutBtn = document.getElementById("logout-btn");
 
 window.onload = async () => {
   await initAuth0();
   await handleRedirect();
   loginBtn.disabled = false;
+  document.getElementById("logout-btn").addEventListener("click", logout);
 };
 
 async function handleRedirect() {
@@ -57,13 +60,6 @@ document.getElementById("signupBtn").onclick = async () => {
     })
 }
 
-localStorage.getItem('logout-btn') = async function checkLogout() {
-    const logoutBtn = localStorage.getItem('logout-btn');
-    if (logoutBtn) {
-        await logout();
-        localStorage.removeItem('logout-btn');
-    }
-}
 
 
 async function logout() {
