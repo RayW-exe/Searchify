@@ -4,16 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
-    "jest": "^30.3.0"
+    "jest": "^30.3.0",
+    "vite": "^8.0.8"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^2.19.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayW-exe/Searchify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RayW-exe/Searchify/issues"
+  },
+  "homepage": "https://github.com/RayW-exe/Searchify#readme"
 }
