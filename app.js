@@ -17,9 +17,7 @@ async function initAuth0() {
 const loginBtn = document.getElementById("loginBtn");
 loginBtn.disabled = true;
 
-if (document.getElementById("logout-btn")) {
-    localStorage.getItem('logout-btn').onclick = logout;
-}
+
 
 window.onload = async () => {
   await initAuth0();
@@ -57,6 +55,11 @@ document.getElementById("signupBtn").onclick = async () => {
             screen_hint: "sign up"
         }
     })
+}
+
+const logoutBtn = localStorage.getItem('logout-btn');
+if (logoutBtn) {
+    document.getElementById("logout-btn").addEventListener("click", logout);
 }
 
 async function logout() {
