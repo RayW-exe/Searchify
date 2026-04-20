@@ -20,9 +20,25 @@
     <div class="content">
         <h1>Jobs</h1>
         <p>Here you can find all jobs.</p>
+        <select name="filterstatus" id="filterstatus">
+            <option value="all">All Jobs</option>
+            <option value="open">Open Jobs</option>
+            <option value="closed">Closed Jobs</option>
+        </select>
+        <select name="filterlocation" id="filterlocation">
+            <option value="all">All Locations</option>
+            <option value="remote">Remote</option>
+            <option value="office">Office</option>
+        </select>
+        <select name="filtername" id="filtername">
+            <option value="all">All Names</option>
+            <option value="essay">Essay Writing</option>
+            <option value="design">Graphic Design</option>
+            <option value="development">Web Development</option>
+        </select>
         <div class="job-list">
             <div class="job-item1">
-                <h2>Job 1: Essay writing</h2>
+                <h2>Essay writing</h2>
                 <p>Status: Open</p>
                 <p>Location: Remote</p>
                 <p>Description: I need a professianal writer who can write a high-quality essay on the given topic.</p>
@@ -31,7 +47,7 @@
 
             </div>
             <div class="job-item2">
-                <h2>Job 2: Graphic Design</h2>
+                <h2>Graphic Design</h2>
                 <p>Status: Open</p>
                 <p>Location: Office</p>
                 <p>Description: I need a graphic designer to create a poster for our upcoming event.</p>
@@ -39,7 +55,7 @@
                 <button onclick="sendData2()">Apply</button>
             </div>
             <div class="job-item3">
-                <h2>Job 3: Web Development</h2>
+                <h2>Web Development</h2>
                 <p>Status: Closed</p>
                 <p>Location: Remote</p>
                 <p>Description: I need a web developer to build a responsive website for my business.</p>
