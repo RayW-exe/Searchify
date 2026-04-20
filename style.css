@@ -1,47 +1,78 @@
-body{
+body {
     background-color: bisque;
+    margin: 0;
+    min-height: 100vh;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 20px;
+    min-height: 100vh;
 }
 
 .login-and-signup {
     background-color: white;
-    padding: 40px;
+    padding: 32px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(5, 5, 5, 1.5);
+    box-shadow: 0 4px 8px rgba(5, 5, 5, 0.15);
     text-align: center;
+    width: min(100%, 420px);
+    box-sizing: border-box;
 }
 
 .login-and-signup h1 {
-    font-family: Helvetica;
-    font-size: 36px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 32px;
     margin-bottom: 20px;
     background-color: bisque;
     border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
 }
 
 .login-and-signup h2 {
-    font-family: 'Dreaming wedding';
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-family: 'Dreaming wedding', sans-serif;
+    font-size: 22px;
+    margin-bottom: 28px;
 }
 
 .login-and-signup button {
     background-color: bisque;
     border: none;
-    padding: 10px 20px;
+    padding: 14px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+}
+
+.login-and-signup button + button {
+    margin-top: 12px;
 }
 
 .login-and-signup button:hover {
     background-color: #f0c27b;
+}
+
+@media (max-width: 600px) {
+    .login-and-signup {
+        padding: 24px;
+    }
+
+    .login-and-signup h1 {
+        font-size: 26px;
+    }
+
+    .login-and-signup h2 {
+        font-size: 20px;
+    }
+
+    .login-and-signup button {
+        font-size: 18px;
+        padding: 14px 0;
+    }
 }
