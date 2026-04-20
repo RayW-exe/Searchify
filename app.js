@@ -57,11 +57,13 @@ document.getElementById("signupBtn").onclick = async () => {
     })
 }
 
-window.addEventListener('storage', (event) => {
-    if (event.key === 'logout-btn') {
-        logout();
+localStorage.getItem('logout-btn') = async function checkLogout() {
+    const logoutBtn = localStorage.getItem('logout-btn');
+    if (logoutBtn) {
+        await logout();
+        localStorage.removeItem('logout-btn');
     }
-});
+}
 
 
 async function logout() {
