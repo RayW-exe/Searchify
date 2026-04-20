@@ -60,18 +60,18 @@ body {
 
 @media (max-width: 600px) {
     .login-and-signup {
-        padding: 20px;
+        padding: 18px;
     }
 
     .login-and-signup h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .login-and-signup h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .login-and-signup button {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
