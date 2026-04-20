@@ -49,6 +49,12 @@ body {
     box-sizing: border-box;
 }
 
+.content h1 {
+    font-family: 'Mogra', Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
 .job-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -101,6 +107,14 @@ body {
     position: relative;
     width: 100%;
     box-sizing: border-box;
+}
+
+.job-item1 h2,
+.job-item2 h2,
+.job-item3 h2 {
+    font-family: 'Mogra', Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {

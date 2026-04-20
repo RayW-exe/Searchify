@@ -49,6 +49,12 @@ body {
     box-sizing: border-box;
 }
 
+.content h1 {
+    font-family: 'Mogra', Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
 .info,
 .jobs {
     background-color: white;
@@ -60,13 +66,20 @@ body {
     box-sizing: border-box;
 }
 
+.info h2,
+.jobs h2 {
+    font-family: 'Mogra', Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
 .jobs ul {
     padding-left: 0;
 }
 
 .jobs ul li {
     margin-bottom: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: bolder;
     font-size: larger;
 }

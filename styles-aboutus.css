@@ -49,6 +49,14 @@ body {
     box-sizing: border-box;
 }
 
+.about-info h2,
+.contact-us h2,
+.contact-form h2 {
+    font-family: 'Mogra', Arial, sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
 .about-info,
 .contact-us,
 .contact-form {
@@ -95,6 +103,12 @@ body {
     position: relative;
     width: 100%;
     box-sizing: border-box;
+}
+
+.content h1 {
+    font-family: 'Mogra', Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
