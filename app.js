@@ -55,3 +55,19 @@ document.getElementById("signupBtn").onclick = async () => {
     })
 }
 
+async function logout() {
+    if (!auth0client) {
+        console.log("Auth0 client not initialized");
+        return;
+    }
+    await auth0client.logout({
+        logoutParams: {
+            returnTo: "https://rayw-exe.github.io/Searchify/"
+        }
+    });
+}
+
+if (document.getElementById("logoutBtn")) {
+    document.getElementById("logoutBtn").onclick = logout;
+}
+

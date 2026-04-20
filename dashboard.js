@@ -1,3 +1,17 @@
+const jobData = localStorage.getItem('jobData');
+const jobType = localStorage.getItem('jobType');
+if (jobData && jobType) {
+    if (jobType === '1') {
+        addJobItem1();
+    } else if (jobType === '2') {
+        addJobItem2();
+    } else if (jobType === '3') {
+        addJobItem3();
+    }
+    localStorage.removeItem('jobData');
+    localStorage.removeItem('jobType');
+}
+
 function addJobItem1() {
     const jobItem = localStorage.getItem('jobData');
     const newDiv = document.createElement('div');
@@ -49,18 +63,4 @@ function addJobItem3() {
     }
 }
 
-// Load job on page load
-const jobData = localStorage.getItem('jobData');
-const jobType = localStorage.getItem('jobType');
-if (jobData && jobType) {
-    if (jobType === '1') {
-        addJobItem1();
-    } else if (jobType === '2') {
-        addJobItem2();
-    } else if (jobType === '3') {
-        addJobItem3();
-    }
-    // Clear after adding
-    localStorage.removeItem('jobData');
-    localStorage.removeItem('jobType');
-}
+
