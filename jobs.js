@@ -1,38 +1,38 @@
-function sendData1() {
-    const jobItem = document.querySelector('.job-item1').innerHTML;
-    localStorage.setItem('jobData', jobItem);
+function sendDataForJob1() {
+    const jobStoredContent = document.querySelector('.job:essaysector-1').innerHTML;
+    localStorage.setItem('jobData', jobStoredContent);
     localStorage.setItem('jobType', '1');
     window.location.href = 'dashboard.html';
 }
 
-function sendData2() {
-    const jobItem = document.querySelector('.job-item2').innerHTML;
-    localStorage.setItem('jobData', jobItem);
+function sendDataForJob2() {
+    const jobStoredContent = document.querySelector('.job:designsector-2').innerHTML;
+    localStorage.setItem('jobData', jobStoredContent);
     localStorage.setItem('jobType', '2');
     window.location.href = 'dashboard.html';
 }
 
-function sendData3() {
-    const jobItem = document.querySelector('.job-item3').innerHTML;
-    localStorage.setItem('jobData', jobItem);
+function sendDataForJob3() {
+    const jobStoredContent = document.querySelector('.job:developmentsector-3').innerHTML;
+    localStorage.setItem('jobData', jobStoredContent);
     localStorage.setItem('jobType', '3');
     window.location.href = 'dashboard.html';
 }
 
-const filterStatus = document.getElementById('filterstatus');
-const filterLocation = document.getElementById('filterlocation');
-const filterName = document.getElementById('filtername');
+const filterStatusForDaJobs = document.getElementById('filterstatus');
+const filterLocationForDaJobs = document.getElementById('filterlocation');
+const filterNameForDaJobs = document.getElementById('filtername');
 
-filterStatus.addEventListener('change', filterJobs);
-filterLocation.addEventListener('change', filterJobs);
-filterName.addEventListener('change', filterJobs);
+filterStatusForDaJobs.addEventListener('change', filterJobs);
+filterLocationForDaJobs.addEventListener('change', filterJobs);
+filterNameForDaJobs.addEventListener('change', filterJobs);
 
 function filterJobs() {
-    const statusValue = filterStatus.value;
-    const locationValue = filterLocation.value;
-    const nameValue = filterName.value;
+    const statusValue = filterStatusForDaJobs.value;
+    const locationValue = filterLocationForDaJobs.value;
+    const nameValue = filterNameForDaJobs.value;
 
-    const jobItems = document.querySelectorAll('.job-item1, .job-item2, .job-item3');
+    const jobItems = document.querySelectorAll('.job-selection-item1, .job-selection-item2, .job-selection-item3');
 
     jobItems.forEach(job => {
         const jobStatus = job.querySelector('p:nth-child(2)').textContent.split(': ')[1].toLowerCase();

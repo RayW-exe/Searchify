@@ -55,16 +55,16 @@ body {
     margin-bottom: 20px;
 }
 
-.job-list {
+.job-list-for-all {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-.job-item1,
-.job-item2,
-.job-item3 {
+.job-essaysector-1,
+.job-designsector-2,
+.job-developmentsector-3 {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -72,16 +72,16 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.job-item1:hover,
-.job-item2:hover,
-.job-item3:hover {
+.job-essaysector-1:hover,
+.job-designsector-2:hover,
+.job-developmentsector-3:hover {
     box-shadow: 0 8px 16px rgba(5, 5, 5, 0.2);
     transform: translateY(-3px);
 }
 
-.job-item1 button,
-.job-item2 button,
-.job-item3 button {
+.job-essaysector-1 button,
+.job-designsector-2 button,
+.job-developmentsector-3 button {
     background-color: rgb(158, 105, 40);
     color: white;
     border: none;
