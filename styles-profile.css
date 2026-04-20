@@ -80,6 +80,26 @@ body {
     margin-bottom: 10px;
 }
 
+.logout-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#logoutBtn {
+    background-color: rgb(158, 105, 40);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#logoutBtn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
 @media (max-width: 768px) {
     .navigation ul {
         gap: 8px;
