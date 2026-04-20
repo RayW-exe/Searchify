@@ -57,9 +57,14 @@ document.getElementById("signupBtn").onclick = async () => {
     })
 }
 
-const logoutBtn = localStorage.getItem('logout-btn');
-if (logoutBtn) {
-    async function logout() {
+window.addEventListener('storage', (event) => {
+    if (event.key === 'logout-btn') {
+        logout();
+    }
+});
+
+
+async function logout() {
     if (!auth0client) {
         console.log("Auth0 client not initialized");
         return;
@@ -70,9 +75,6 @@ if (logoutBtn) {
         }
     });
 }
-}
-
-
 
 
 
